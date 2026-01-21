@@ -8,7 +8,7 @@ class Customer(models.Model):
     cpf_cnpj = models.CharField(max_length=50)
     email = models.CharField(max_length=100)
     phone = models.CharField(max_length=50)
-    created_at = models.DateField(auto_now_add=True)
+    created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
 
     class Meta:
