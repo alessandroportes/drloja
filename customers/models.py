@@ -15,4 +15,4 @@ class Customer(models.Model):
         ordering = ['name']
 
     def __str__(self):
-        return self.name
+        return self.name, self.email

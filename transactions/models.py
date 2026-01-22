@@ -7,8 +7,8 @@ class Transaction(models.Model):
     id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
     description = models.CharField(max_length=100)
     value = models.DecimalField(max_digits=20, decimal_places=2)
-    # file1 = models.FieldFile()
-    # file2 = models.FieldFile()
+    file1 = models.FileField(upload_to='files/', blank=False, null=False)
+    file2 = models.FileField(upload_to='files/', blank=True, null=True)
     customer = models.ForeignKey(
         Customer,
         on_delete=models.PROTECT,
