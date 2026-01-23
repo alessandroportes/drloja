@@ -12,7 +12,7 @@ class Transaction(models.Model):
     customer = models.ForeignKey(
         Customer,
         on_delete=models.PROTECT,
-        related_name='customer',
+        related_name='transactions',
     )
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)

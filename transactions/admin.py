@@ -3,7 +3,7 @@ from . import models
 
 
 class TransactionAdmin(admin.ModelAdmin):
-    list_display = ('description', 'customer', 'value')
+    list_display = ('description', 'customer', 'value', 'created_at', 'updated_at')
     search_fiels = ('customer')
 
 
